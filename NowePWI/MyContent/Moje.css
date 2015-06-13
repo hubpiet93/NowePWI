@@ -1,0 +1,192 @@
+﻿#menu>.navbar {
+    background-color: #f2ac2e;
+   border:none;
+    font-size: 1.3em;
+}
+
+#menu>.navbar>.container-fluid>.navbar-collapse>.navbar-nav>.dropdown>.dropdown-menu{
+    background-color: #f2ac2e;
+}
+
+.carousel {
+    margin-top: -20px;
+  width: 100%;
+  max-height:800px;
+}
+.carousel .item {
+  width: 100%;
+  height: 600px;
+}
+.carousel .item img {
+  width: 100%;
+  height: 900px;
+}
+.carousel-caption {
+  top: 50px;
+  bottom: auto;
+}
+.carousel-caption > h1 {
+  font-size: 4.5em;
+  color: #ffd800;
+}
+
+
+#ostronie {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+#ostronie .ostronie-nag {
+  padding-bottom: 20px;
+}
+#ostronie .panel-heading a {
+  text-decoration: none;
+}
+#ostronie .panel-heading a h2 {
+  color: #fc4349;
+}
+#ostronie .panel-heading a h2:hover span {
+  -webkit-animation: slideOutDown.8s;
+}
+#ostronie .panel-heading a:hover {
+  text-decoration: none;
+}
+
+#ikony {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #fc4349;
+}
+#ikony img {
+  width: 200px;
+  height: 150px;
+}
+#omnie {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #20b2aa;
+  text-align: center;
+}
+#omnie .omnie-nag {
+  text-align: center;
+  color: white;
+  font-weight: 800;
+  letter-spacing: 10px;
+  padding-top: 0;
+  padding-bottom: 100px;
+}
+#omnie .omnie-cialo img.img-responsive {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+}
+#omnie .omnie-cialo img.img-responsive:hover {
+  -webkit-animation: pulse .8s;
+}
+#omnie .omnie-cialo a {
+  text-align: center;
+  background-color: #20b2aa;
+  border-color: white;
+  color: white;
+  width: 200px;
+  height: 60px;
+  line-height: 45px;
+  font-size: 1.5em;
+  letter-spacing: 8px;
+  vertical-align: middle;
+  margin-top: 50px;
+}
+#omnie .omnie-cialo a:hover {
+  background-color: white;
+  color: #20b2aa;
+}
+#modal-me .modal-content {
+  text-align: center;
+}
+#modal-me .modal-content .modal-header {
+  text-align: center;
+}
+#modal-me .modal-content .modal-header h4 {
+  font-size: 2em;
+  color: #fc4349;
+}
+#modal-me .modal-content .modal-header h3 {
+  font-size: 1.2em;
+  color: #ccc;
+}
+#modal-me .modal-content .modal-body .img-responsive {
+  margin: 0 auto;
+  height: 300px;
+  width: 300px;
+}
+#modal-me .modal-content .modal-body p {
+  padding-top: 50px;
+  color: #aaa;
+}
+
+#kontakt {
+    padding-top:80px;
+    background-color: rgba(255, 47, 0, 0.65);
+}
+#kontakt .kontakt-nag {
+   text-align: center;
+  color: white;
+  letter-spacing: 10px;
+}
+#kontakt .kontakt-nag h1 {
+    font-size:3.5em;    
+    font-weight:200;
+}
+#kontakt .col-inputs {
+    padding-top:180px;
+}
+#kontakt .form-group .input-lg{
+    height:60px;
+    font-size:2em;
+    margin-top:30px;
+}
+ #kontakt .kotrolki {
+    margin-top:100px;   
+ }
+#kontakt .form-group .input-textarea {
+    font-size:2em;
+}
+#kontakt .row-btn {
+    text-align: center;
+    padding-bottom:100px;
+}
+#kontakt .row-btn .send-btn {
+  background-color: rgba(0, 0,0,0);
+  border-color: white;
+  color: white;
+  width: 200px;
+  height: 60px;
+  line-height: 45px;
+  font-size: 1.5em;
+  letter-spacing: 8px;
+  vertical-align: middle;
+  margin-top: 50px;
+}
+#kontakt .row-btn .send-btn:hover {
+    background-color: white;
+  color: #20b2aa;
+}
+#stopka {
+  margin-top: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  text-align: center;
+  background-color: #20b2aa;
+}
+#stopka h3 {
+  color: white;
+  font-size: 2.5em;
+}
+
+#github {
+    background-color: white;
+    padding-top:100px;
+    padding-bottom:100px;
+    text-align: center;
+}

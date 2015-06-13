@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NowePWI", "NowePWI\NowePWI.csproj", "{55F10322-86AB-4687-AF92-37FF52BF1042}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{62A7D752-8597-4C58-82D7-D86A49D6A948}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{E0621181-5E98-4FD4-A935-1A1D46C061E2}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\NowePWI-WAWS-dev.json = PublishScripts\Configurations\NowePWI-WAWS-dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55F10322-86AB-4687-AF92-37FF52BF1042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55F10322-86AB-4687-AF92-37FF52BF1042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55F10322-86AB-4687-AF92-37FF52BF1042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55F10322-86AB-4687-AF92-37FF52BF1042}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E0621181-5E98-4FD4-A935-1A1D46C061E2} = {62A7D752-8597-4C58-82D7-D86A49D6A948}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,21 @@
+{
+    "environmentSettings": {
+        "webSite": {
+            "name": "NowePWI",
+            "location": "North Europe"
+        },
+        "databases": [
+            {
+                "connectionStringName": "DefaultConnection",
+                "databaseName": "NowePWI_db",
+                "serverName": "",
+                "user": "hubpiet93",
+                "password": "",
+                "edition": "",
+                "size": "",
+                "collation": "",
+                "location": "North Europe"
+            }
+        ]
+    }
+}

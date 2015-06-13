@@ -1,0 +1,105 @@
+﻿@using Microsoft.AspNet.Identity
+@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/Bundle/css")
+
+
+</head>
+<body>
+
+
+    <header id="menu">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">@Resource.PWI</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav main-nav">
+                        <li><a class="pomoc" href="@Url.Action("Index","Home")"><span class="glyphicon glyphicon-home"></span></a></li>
+                        <li><a class="pomoc" href="#ostronie">@Resource.OStronie</a></li>
+                        <li><a class="pomoc" href="#omnie">@Resource.Omnie</a></li>
+                        <li><a class="pomoc" href="#kontakt">@Resource.Kontakt</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+
+                        @if (Request.IsAuthenticated)
+                        {
+                            <li>
+                                <a> @User.Identity.GetUserName()</a>
+                            </li>
+                            <li>
+                                <a href="javascript:document.getElementById('logoutForm').submit()">@Resource.Wyloguj</a>
+                            </li>
+
+                        }
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">@Resource.Konto <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a data-toggle="modal" data-target="#modal-logowanie" role="button">@Resource.Zaloguj</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" data-target="#modal-rejestrowanie" role="button">@Resource.Zarejestruj</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li style="text-align:center"> @Resource.WybierzJezyk</li>
+                                <li class="divider"></li>
+                                @{
+                                    foreach (var i in NowePWI.SiteLanguages.AvailableLanguages)
+                                    {
+                                        <li>
+                                            @Html.ActionLink(i.LangFullName, "ChangeLanguage", "Home", new { lang = i.LangCultureName }, null)
+                                        </li>
+                                    }
+                                }
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    @RenderBody()
+
+
+
+
+
+
+
+
+
+    @if (Request.IsAuthenticated)
+    {
+        using (Html.BeginForm("Logoff", "Home", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+        {
+            @Html.AntiForgeryToken()
+        }
+    }
+    @Scripts.Render("~/Scripts/Bundle/js")
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    @RenderSection("ScriptsBottom", required: false)
+</body>
+</html>

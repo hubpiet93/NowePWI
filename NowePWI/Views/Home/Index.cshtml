@@ -1,0 +1,477 @@
+﻿@using Microsoft.AspNet.Identity
+@model NowePWI.ViewModels.IndexViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PhotosLayout.cshtml";
+}
+
+
+
+
+<div id="pokaz1" class="carousel slide hidden-xs " data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#pokaz1" data-slide-to="0" class="active"></li>
+        <li data-target="#pokaz1" data-slide-to="1"></li>
+        <li data-target="#pokaz1" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+        <div class="item active">
+            <img class="img-responsive" alt="" src="~/Content/Images/slajd1.jpg" />
+        </div>
+        <div class="item">
+            <img class="img-responsive" alt="" src="~/Content/Images/slajd2.jpg" />
+        </div>
+        <div class="item">
+            <img class="img-responsive" alt="" src="~/Content/Images/slajd3.jpg" />
+        </div>
+
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#pokaz1" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Poprzednie</span>
+    </a>
+    <a class="right carousel-control" href="#pokaz1" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Następne</span>
+    </a>
+</div>
+
+
+<section id="ostronie">
+    <div class="container">
+        <!--pierwszy tytułowy wiersz-->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ostronie-nag">
+                <h1>@Resource.OStronie</h1>
+            </div>
+        </div>
+
+
+        <!--wiersz z kolumnami-->
+        <div class="row">
+            <div class="panel-group" id="harmonijka">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="panel-heading">
+                        <a href="#nowosci01" data-toggle="collapse" data-parent="#menu_harmonijkowe">
+                            <h2>@Resource.Pomysl <span class="glyphicon glyphicon-menu-down"></span></h2>
+                        </a>
+                    </div>
+                    <div id="nowosci01" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <blockquote>
+                                <h3>@Resource.PomyslInfo</h3>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="panel-heading">
+                        <a href="#nowosci02" data-toggle="collapse" data-parent="#menu_harmonijkowe">
+                            <h2>@Resource.Wykonanie <span class="glyphicon glyphicon-menu-down"></span></h2>
+                        </a>
+                    </div>
+                    <div id="nowosci02" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <blockquote>
+                                <h3>@Resource.WykonanieInfo</h3>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="panel-heading">
+                        <a href="#nowosci03" data-toggle="collapse" data-parent="#menu_harmonijkowe">
+                            <h2>@Resource.Technologia  <span class="glyphicon glyphicon-menu-down"></span></h2>
+                        </a>
+                    </div>
+                    <div id="nowosci03" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <blockquote>
+                                <h3>@Resource.TechnologiaInfo</h3>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="ikony">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                <img class="img-responsive" alt="" src="~/Content/Images/css.png" />
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                <img class="img-responsive" alt="" src="~/Content/Images/html.png" />
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                <img class="img-responsive" alt="" src="~/Content/Images/javascript.png" />
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                <img class="img-responsive" alt="" src="~/Content/Images/programming.png" />
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="omnie">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 omnie-nag">
+                <h1>@Resource.Omnie</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 omnie-cialo wow bounceIn">
+                <img id="me" class="img-circle img-responsive" alt="" src="~/Content/Images/me1.jpg" />
+                <a class="btn btn-default " data-toggle="modal" data-target="#modal-me" href="#" role="button">@Resource.Czytaj</a>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section  id="github" >
+    <div class=" container">
+        <div class="row">
+            <div class="col-lg-12">
+                <a href="facebook.com">
+                    <button type="button" class="btn btn-info btn-lg ">Link do kodu na github</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="kontakt">
+    <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 kontakt-nag">
+            <h1>@Resource.NapiszDoMnie</h1>
+        </div>
+        @using (@Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "mailform" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-inputs kotrolki">
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.EmailViewModelEmail.Title, new
+                    {
+                        @class = "form-control input-lg",
+                        @placeholder = @Resource.Tytul
+                    })
+                    <h3>@Html.ValidationMessageFor(model => model.EmailViewModelEmail.Title)</h3>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-inputs">
+                <div class="form-group">
+                    @Html.TextAreaFor(model => model.EmailViewModelEmail.Message, new { @class = "form-control input-textarea", @placeholder = @Resource.Wiadomosc, @rows = "10" })
+                    <h3> @Html.ValidationMessageFor(model => model.EmailViewModelEmail.Message)</h3>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row-btn">
+                @if (Request.IsAuthenticated)
+                {
+                    <a class="btn btn-default send-btn " href="javascript:document.getElementById('mailform').submit()" role="button">@Resource.Wyslij</a>
+                }
+                else
+                {
+                    <h2>@Resource.MusiszZalogowac</h2>
+                }
+
+            </div>
+
+        }
+    </div>
+</section>
+
+<section id="stopka">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h3>Copyright 2015 &copy; Hubert Pietruczuk</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--Okna modalne-->
+<div class="modal fade modalne-omnie" id="modal-me" tabindex="-2" role="dialog" aria-labelledby="modalne1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalne1">@Resource.Omnie</h4>
+                <h3 class="modal-title">Hubert Pietruczuk</h3>
+            </div>
+            <div class="modal-body">
+                <img id="Me_Modal" class="img-rounded  img-responsive" alt="" src="~/Content/Images/me1.jpg" />
+                <p>
+                    O enim domesticarum quo labore te pariatur o nulla. Te quid ad lorem, appellat
+                    est culpa, malis hic eiusmod, qui pariatur hic nescius ubi te elit aute si
+                    pariatur ad et irure fabulas incurreret, tamen consequat tractavissent, magna
+                    proident incurreret. Voluptate quem fore offendit aute, malis nescius mentitum,
+                    senserit enim ab admodum relinqueret, dolore senserit ut sint sint, mentitum sed
+                    officia a voluptate noster nescius ex noster occaecat quo ingeniis hic ad quorum
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">@Resource.Zamknij</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade modalne-omnie" id="modal-rejestrowanie" tabindex="-2" role="dialog" aria-labelledby="modalnerejestrowanie" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalnerejestrowanie">@Resource.Zarejestruj</h4>
+
+            </div>
+            <div class="modal-body">
+                @if (!Request.IsAuthenticated)
+                {
+                    using (@Html.BeginForm("Register", "Home"))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="text-danger">
+                            @Html.ValidationSummary()
+                        </div>
+                        <div class="row " style="padding-top: 10px;">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="margin-top:5px;">
+                                <p class="text-muted text-right">@Html.LabelFor(o => o.RegisterViewModel.Email)</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                @Html.TextBoxFor(o => o.RegisterViewModel.Email, new { @class = "form-control", @placeholder = @Resource.Email })
+                                <div class="text-danger">
+                                    @Html.ValidationMessageFor(o => o.RegisterViewModel.Email)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 10px;">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="margin-top:5px;">
+                                <p class="text-muted text-right">@Html.LabelFor(o => o.RegisterViewModel.Password)</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 input" data-toggle="tooltip" data-placement="top" title="@Resource.HasloInfo">
+                                @Html.PasswordFor(o => o.RegisterViewModel.Password, new { @class = "form-control ", @placeholder = @Resource.Haslo })
+                                <div class="text-danger ">
+                                    @Html.ValidationMessageFor(o => o.RegisterViewModel.Password)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 10px;">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="margin-top:5px;">
+                                <p class="text-muted text-right">@Html.LabelFor(o => o.RegisterViewModel.ConfirmPassword)</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 ">
+                                @Html.PasswordFor(o => o.RegisterViewModel.ConfirmPassword, new { @class = "form-control", @placeholder = @Resource.HasloPotwierdz })
+                                <div class="text-danger ">
+                                    @Html.ValidationMessageFor(o => o.RegisterViewModel.ConfirmPassword)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="text-align: center;padding:20px;">
+                            <div>
+                                <button type="submit" class="btn btn-default">
+
+                                    @Resource.Zarejestruj
+
+                                </button>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="jumbotron" style="text-align: center;margin-top:50px">
+                        <h2 class="text-danger">@Resource.Juzjesteszalogowany</h2>
+                    </div>
+                }
+
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">@Resource.Zamknij</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade modalne-omnie" id="modal-logowanie" tabindex="-2" role="dialog" aria-labelledby="modalnelogowanie" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalnelogowanie">@Resource.Zaloguj</h4>
+
+            </div>
+            <div class="modal-body">
+
+                @if (!Request.IsAuthenticated)
+                {
+                    using (@Html.BeginForm("Login", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        
+                        <div class="row " style="padding-top: 10px;">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <p class="text-muted">@Html.LabelFor(o => o.LoginViewModel.Email)</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                @Html.TextBoxFor(o => o.LoginViewModel.Email, new { @class = "form-control", @placeholder = @Resource.Email })
+                                <div class="text-danger">
+                                    @Html.ValidationMessageFor(o => o.LoginViewModel.Email)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 10px;">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <p class="text-muted">@Html.LabelFor(o => o.LoginViewModel.Password)</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 ">
+                                @Html.PasswordFor(o => o.LoginViewModel.Password, new { @class = "form-control", @placeholder = @Resource.Haslo })
+                                <div class="text-danger ">
+                                    @Html.ValidationMessageFor(o => o.LoginViewModel.Password)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 10px;">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <p class="text-muted">@Html.LabelFor(m => m.LoginViewModel.RememberMe)</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                @Html.CheckBoxFor(m => m.LoginViewModel.RememberMe, new { @checked = "checked", @class = "checkbox" })
+                                <div class="text-danger">
+                                    @Html.ValidationMessageFor(o => o.LoginViewModel.RememberMe)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="text-align: center">
+                            <div>
+                                <button type="submit" class="btn btn-default">
+
+                                    @Resource.Zaloguj
+
+
+                                </button>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="jumbotron" style="text-align: center; margin-top: 50px">
+                        <h2 class="text-danger">@Resource.Juzjesteszalogowany</h2>
+                    </div>
+                }
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">@Resource.Zamknij</button>
+            </div>
+        </div>
+    </div>
+</div>
+@try
+{
+    string value;
+    try // próbowanie pobrania ciasteczka
+    {
+        HttpCookie cookies = Request.Cookies.Get("torcik");
+        value = cookies.Values.Get("Powiadomienie");
+    }
+    catch (Exception) //jezeli nie istnieje to wez ustaw byle co
+    {
+        value = "lalala";
+    }
+
+    if (value != "Zamknij")
+    {
+        @Html.Partial("_CookiesPoliticsPartial");
+    }
+}
+catch (Exception)
+{
+    @Html.Partial("_CookiesPoliticsPartial");
+}
+
+
+
+
+@section ScriptsBottom
+{
+
+    <script>
+        $('.send-btn').tooltip('show')
+    </script>
+
+    <script>
+        $('.input').tooltip('show')
+    </script>
+
+    @if (null != TempData["errors"])
+    {
+        <script type="text/javascript">
+            alert("@TempData["errors"]");
+        </script>
+    }
+    <script>
+        $(document).ready(function() {
+            $("#ZamkniecieCookies").click(function(event) {
+                $("#PoitykaCookiesInfo").slideUp();
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/CreateCookies",
+                });
+
+
+            });
+        });
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('a.pomoc[href^="#"]').on('click', function (e) {
+                e.preventDefault();
+
+                var target = this.hash,
+                $target = $(target);
+
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 2000, 'swing', function () {
+                    window.location.hash = target;
+                });
+            });
+        })
+    </script>
+}
+
+
+
